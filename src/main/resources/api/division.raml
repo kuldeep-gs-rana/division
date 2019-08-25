@@ -1,0 +1,31 @@
+#%RAML 1.0
+version: v1
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/d941f8a7-a471-4446-8bb6-9075aade9d43/ # 
+title: Division
+
+/div:
+  get:
+    queryParameters:
+      num1:
+        type: number
+        required: true
+      num2:
+        type: number
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "division done"}
+
+  post:
+    body:
+      application/json:
+        example:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {"message" : "Numbers divided"}
